@@ -2,6 +2,21 @@
 
 Multi-account Gmail MCP connector for Claude — add any number of Gmail accounts, send emails, and monitor your inbox.
 
+## The Problem
+
+The stock `@anthropic/gmail-mcp` connector only supports **a single Gmail account**. If you have multiple email addresses (work, personal, side projects), you're out of luck — you'd need separate config entries and can't switch between them within a conversation.
+
+## The Fix
+
+MultiMail lets you add **as many Gmail accounts as you want** and switch between them seamlessly:
+
+- "Add my Gmail account" → **browser popup, click Allow, done**
+- "Add my **work** email too" → **repeat for a second account**
+- "What's in my **work** inbox?" → **reads from that account**
+- "Send this from my **personal** email" → **sends from that account**
+
+Accounts persist across sessions. Add once, use forever.
+
 ## How to Share with Others
 
 Each user needs their own Google Cloud project. No personal info is baked into the code.
