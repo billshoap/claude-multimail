@@ -91,6 +91,21 @@ Once verified, anyone can use it without being added as a test user.
 - **Tokens stay local** — OAuth tokens never leave your machine
 - **Each user has their own Google project** — no shared secrets
 
+## Custom Connectors
+
+Need a custom MCP connector for your business or tool? I build tailored connectors that give Claude access to any API, database, or internal system.
+
+**What I can build:**
+- CRM connectors (Salesforce, HubSpot, custom)
+- Database connectors (Postgres, MySQL, Snowflake)
+- Internal tool integrations
+- Custom SaaS connectors
+- Multi-account versions of existing connectors
+
+**Contact:** [wshoap@gmail.com](mailto:wshoap@gmail.com) — open to contract work and collaborations.
+
+---
+
 ## Commands
 
 | In Claude, say... | What happens |
