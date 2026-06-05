@@ -2,6 +2,20 @@
 
 Multi-account Gmail MCP connector for Claude — add any number of Gmail accounts, send emails, and monitor your inbox.
 
+## One-command Install
+
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/billshoap/claude-multimail/main/install.sh)
+```
+
+Or with your Google credentials:
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/billshoap/claude-multimail/main/install.sh) \
+  --client-id YOUR_ID --client-secret YOUR_SECRET
+```
+
+Restart Claude → "Add my Gmail account"
+
 ## The Problem
 
 The stock `@anthropic/gmail-mcp` connector only supports **a single Gmail account**. If you have multiple email addresses (work, personal, side projects), you're out of luck — you'd need separate config entries and can't switch between them within a conversation.
