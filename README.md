@@ -16,6 +16,18 @@ bash <(curl -fsSL https://raw.githubusercontent.com/billshoap/claude-multimail/m
 
 Restart Claude → "Add my Gmail account"
 
+## Per-Machine Setup
+
+Since tokens are stored **locally** on each machine (`~/.multimail/accounts.json`), you must run the install and authorize each account **once per computer**:
+
+| Machine | Steps |
+|---|---|
+| Desktop | Run install script → authorize in browser → done |
+| Laptop | Run install script → authorize in browser → done |
+| Work computer | Run install script → authorize in browser → done |
+
+Authorizing on one machine does **not** grant access on another. This is by design — your tokens never leave the machine they were created on.
+
 ## The Problem
 
 The stock `@anthropic/gmail-mcp` connector only supports **a single Gmail account**. If you have multiple email addresses (work, personal, side projects), you're out of luck — you'd need separate config entries and can't switch between them within a conversation.
