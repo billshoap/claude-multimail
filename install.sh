@@ -31,10 +31,18 @@ if [[ -z "$CLIENT_ID" || -z "$CLIENT_SECRET" ]]; then
     CLIENT_ID="$GOOGLE_CLIENT_ID"
     CLIENT_SECRET="$GOOGLE_CLIENT_SECRET"
   else
-    echo "┌─────────────────────────────────────────────────────────────┐"
-    echo "│ Enter your Google OAuth credentials                       │"
-    echo "│ (Create at https://console.cloud.google.com/apis/credentials)" │
-    echo "└─────────────────────────────────────────────────────────────┘"
+    echo ""
+    echo "┌──────────────────────────────────────────────────────────────────┐"
+    echo "│ Need Google credentials?                                        │"
+    echo "│                                                                  │"
+    echo "│ 1. Go to https://console.cloud.google.com/apis/credentials      │"
+    echo "│ 2. Select your project                                          │"
+    echo "│ 3. Click 'Create Credentials' → 'OAuth Client ID'               │"
+    echo "│ 4. Application type: 'Desktop app', name: 'MultiMail'          │"
+    echo "│ 5. Add redirect URI: http://localhost                           │"
+    echo "│ 6. Copy the Client ID and Client Secret                         │"
+    echo "└──────────────────────────────────────────────────────────────────┘"
+    echo ""
     read -rp "Client ID:    " CLIENT_ID
     read -rp "Client Secret: " CLIENT_SECRET
   fi

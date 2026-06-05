@@ -2,31 +2,33 @@
 
 Multi-account Gmail MCP connector for Claude — add any number of Gmail accounts, send emails, and monitor your inbox.
 
-## One-command Install
+## Requirements
+
+A Google Cloud project with:
+- **Gmail API** enabled
+- **OAuth Desktop Client ID** with redirect URI `http://localhost`
+- **Your Gmail** added as a test user
+
+[No Google Cloud project? See setup guide ↓](#how-to-share-with-others)
+
+## Install
+
+Run this on each computer you use Claude on:
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/billshoap/claude-multimail/main/install.sh)
 ```
 
-Or with your Google credentials:
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/billshoap/claude-multimail/main/install.sh) \
-  --client-id YOUR_ID --client-secret YOUR_SECRET
-```
+The script will ask for your **Client ID** and **Client Secret** (one-time). Then restart Claude.
 
-Restart Claude → "Add my Gmail account"
+## First Use
 
-## Per-Machine Setup
+1. Restart Claude Desktop
+2. Say **"Add my Gmail account"**
+3. Browser opens → sign in → click **Allow**
+4. Done. Say **"What's in my inbox?"**
 
-Since tokens are stored **locally** on each machine (`~/.multimail/accounts.json`), you must run the install and authorize each account **once per computer**:
-
-| Machine | Steps |
-|---|---|
-| Desktop | Run install script → authorize in browser → done |
-| Laptop | Run install script → authorize in browser → done |
-| Work computer | Run install script → authorize in browser → done |
-
-Authorizing on one machine does **not** grant access on another. This is by design — your tokens never leave the machine they were created on.
+Repeat steps 2-4 for each computer. Tokens live locally on each machine.
 
 ## The Problem
 
